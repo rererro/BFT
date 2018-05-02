@@ -1,20 +1,53 @@
-section {
+/*section {
     margin:10px auto 10px auto;
     padding:20px;
     border:1px solid #ddd
 }
 
-
-
 .section-demo {
-
-    padding-top:15px;
-    padding-bottom:15px;
-    border-bottom: 1px solid #eee;
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
 }
 
 .section-demo-row {
     display:flex;
     justify-content:flex-start;
     align-items:center;
+}*/
+
+.demo-section-left {
+   order:1; 
+}
+
+.demo-section-center {
+    order:2;
+}
+
+.demo-section-right {
+    order:3;
+}
+@media screen and (min-width: 993px) {
+    .demo-section-padding {
+    padding-left: 60px;
+    padding-right: 60px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .demo-section-left {
+   order:2; 
+}
+
+.demo-section-center {
+    order:1;
+}
+
+.demo-section-right {
+    order:3;
+}
+}
+
+.brand-logo {
+    color:white;
 }
