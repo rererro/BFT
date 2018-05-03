@@ -1,33 +1,42 @@
 'use strict';
 
 
-// Slider
-$(function() {
-    // slider configuration
-    var sliderWidth = 700;
-    var sliderSpeed = 1000;
-    var sliderPause = 2000;
-    var currentslide = 1;
+var dropdown = $(".dropdown");
 
-    // cache Dom
-    var slider = $('.slider');
-    var slides = slider.find('.slides');
-    var slide = slides.find('.slide');
-    var interval = setInterval(function() {
-        slides.animate({"margin-left": '-='+sliderWidth},sliderSpeed,function()
-            {
-                currentslide++;
-                if (currentslide === slide.length) {
-                    currentslide = 1;
-                    slides.css('margin-left','0')
-                }
-            }
-        );
-        console.log(currentslide);
-    }, sliderPause);
+// Onclick on a dropdown__btn, toggle dropdown visibility
+dropdown.find(".dropdown__btn").click(function(){
+    $(this).next().children().toggle("fast");
+    console.log("onclick btn");
 });
 
+// Click handler for dropdown
+dropdown.find("dd ul li a").click(function(){
+    var leSpan = $(this).parents(".dropdown").find("dt a span");
+  
+    // Remove selected class
+    $(this).parents(".dropdown").find('dd a').each(function(){
+    $(this).removeClass('selected');
+    console.log("click handler");
+  });
+  
+    // Update selected value
+    leSpan.html($(this).html());
+  
+    // If back to default, remove selected class else addclass on right element
+    if($(this).hasClass('default')){
+    leSpan.removeClass('selected')
+  }
+    else{
+        leSpan.addClass('selected');
+        $(this).addClass('selected');
+    }
+  
+    // Close dropdown
+    $(this).parents("ul").hide();
+    console.log("close dropdown");
+});
 
-current slide
-prev slide next slide display
-others display none
+// Close all dropdown onclick on another element
+$(document).bind('click', function(e){
+    if (! $(e.target).parents().hasClass("dropdown")) $(".dropdown dd ul").hide();
+});

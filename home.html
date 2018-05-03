@@ -12,19 +12,11 @@
 <body>
 
     <div class="toolbar toolbar--themed bg-theme toolbar--fixed">
-        <div>
-            <a href="#" class="brand-logo">Logo</a>
-        </div>
-        <div class="toolbar__section">
-            <span class="toolbar__btn">
-            样式Demo <span class="icon-chevron-down"></span>
-            </span>
-            <span class="toolbar__btn">
-            部件Components <span class="icon-chevron-down"></span>
-            </span>
-            <span class="toolbar__btn">
-            第三 <span class="icon-chevron-down"></span>
-            </span>
+        <div> <a href="#" class="brand-logo">Logo</a> </div>
+        <div class="toolbar__section"> 
+        <span class="toolbar__btn bg-white--hover color-theme--hover">HOME</span> 
+        <span class="toolbar__btn bg-white--hover color-theme--hover">COMPONENTS <span class="icon-chevron-down"></span></span> 
+        <span class="toolbar__btn bg-white--hover color-theme--hover">MORE</span>
         </div>
     </div>
 
@@ -210,7 +202,19 @@
                     </div>
                 </div>                                                                
             </div>
-            <div class="btn btn-hex btn-row color-theme border-theme"><span class="icon-check-circle"></span> 更多帖子</div>                         
+        <ul class="pagination">
+            <li class="pagination__li pagination__li--disabled"><span class="icon-chevron-left"></span></li>
+            <li class="pagination__li color-theme border-theme">1</li>
+            <li class="pagination__li color-theme--hover border-theme--hover">2</li>
+            <li class="pagination__li color-theme--hover border-theme--hover">3</li>
+            <li class="pagination__li color-theme--hover border-theme--hover">4</li>
+            <li class="pagination__li color-theme--hover border-theme--hover">5</li>
+            <li class="pagination__li color-theme--hover border-theme--hover">6</li>
+            <li class="pagination__li color-theme--hover border-theme--hover">7</li>
+            <li class="pagination__li color-theme--hover border-theme--hover">8</li>
+            <li class="pagination__li color-theme--hover border-theme--hover">9</li>            
+            <li class="pagination__li color-theme--hover border-theme--hover"><span class="icon-chevron-right"></span></li>
+        </ul>                         
         </div>
         <div class="section-col demo-section-left" style="flex:1;min-width:300px;">
             <div class="section-title color-theme">
