@@ -609,62 +609,112 @@ background: linear-gradient(to right, rgba(201,29,0,1) 0%, rgba(255,0,148,1) 100
     transition: all 0.2s ease;
 }
 
+
+
+.menu__btn--rb:before {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    right: 4px;
+    bottom: 4px;
+}
+
+.menu__btn--lb:before {
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    left: 4px;
+    bottom: 4px;
+}
+
+.menu__btn--rt:before {
+    border-top: 1px solid;
+    border-right: 1px solid;
+    right: 4px;
+    top: 4px;
+}
+
+.menu__btn--lt:before {
+    border-top: 1px solid;
+    border-left: 1px solid;
+    left: 4px;
+    top: 4px;
+}
+
 .menu__btn:hover:before {
     width:calc(100% - 8px);
     height:0px;
 }
 
-.menu__indicator--rb:before {
-    border-bottom: 1px solid;
-    border-right: 1px solid;
-    right: 4px;
-    bottom: 4px;
+.menu__btn--rb:hover:before,.menu__btn--lb:hover:before {
+    bottom: -7px;
 }
 
-.menu__indicator--lb:before {
-    border-bottom: 1px solid;
-    border-left: 1px solid;
-    left: 4px;
-    bottom: 4px;
+.menu__btn--rt:hover:before,.menu__btn--lt:hover:before {
+    top: -7px;
 }
-
-.menu__indicator--rt:before {
-    border-top: 1px solid;
-    border-right: 1px solid;
-    right: 4px;
-    top: 4px;
-}
-
-.menu__indicator--lt:before {
-    border-top: 1px solid;
-    border-left: 1px solid;
-    left: 4px;
-    top: 4px;
-}
-
 
 .menu dt a {
   display: block;
   width: 100%;
 }
 
-.menu dd {
-    position: relative;
+.menu--rb {
+    position:absolute;
+    bottom:0;
+    left:0;
 }
+
+.menu--rt {
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.menu--lb {
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+.menu--lt {
+    position:absolute;
+    top:0;
+    right:0;
+}
+
 .menu dd ul {
     z-index:1;
     display: none;
     position: absolute;
-    left: 0;
-    right:0;
-    top: 0;
     width:250px;
     line-height: 40px;
     background: white;
+    border:1px solid;
+}
+
+.menu--toolbar dd ul {
     -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
 
+.menu--rb ul {
+    left: 0;
+    top: 0;
+}
+
+.menu--rt ul {
+    left: 0;
+    bottom:0;
+}
+
+.menu--lb ul {
+    right: 15px;
+    top: 0;
+}
+
+.menu--lt ul {
+    right: 15px;
+    bottom: 0;
+}
 
 
 .menu dd li a {
