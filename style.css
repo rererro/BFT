@@ -70,7 +70,6 @@ html, input, textarea, select, button
 }
 
 body {
-    margin:0;
     padding-top:56px;
 }
 
@@ -86,7 +85,13 @@ img {
     max-width:100%;
 }
 
-
+.btn {
+        -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
 
 
 /*typography*/
@@ -451,11 +456,11 @@ background: linear-gradient(to right, rgba(201,29,0,1) 0%, rgba(255,0,148,1) 100
 }
 
 .btn:hover {
-    filter: grayscale(50%);
+    filter: grayscale(20%);
 }
 
 .btn:active {
-    filter: grayscale(70%);
+    filter: grayscale(50%);
 }
 
 
@@ -472,6 +477,7 @@ background: linear-gradient(to right, rgba(201,29,0,1) 0%, rgba(255,0,148,1) 100
     background: white;
     border-left: 1px solid;
     transform: skew(45deg);
+    transition:all 0.3s ease;
 }
 
 .btn-hex:after {
@@ -487,6 +493,21 @@ background: linear-gradient(to right, rgba(201,29,0,1) 0%, rgba(255,0,148,1) 100
     background: white;
     border-right: 1px solid;
     transform: skew(45deg);
+        transition:all 0.3s ease;
+}
+
+.btn-hex:hover:before {
+    right: 0px;
+    top: -1px;
+    width: 0px;
+    height: 0px;
+}
+
+.btn-hex:hover:after {
+    left: 0px;
+    bottom: -1px;
+    width: 0px;
+    height: 0px;    
 }
 
 
@@ -516,30 +537,6 @@ background: linear-gradient(to right, rgba(201,29,0,1) 0%, rgba(255,0,148,1) 100
     width:100%;
 }
 
-
-/*menu*/
-
-.menu {
-    display:inline-block;
-    position:relative;
-}
-
-.menu__container {
-    position: absolute;
-    background: white;
-    left: 7px;
-    bottom: 0;
-    transition: all 0.3s ease;
-    transform: translate3d(0,100%,0);
-    border:1px solid;
-    background:white;
-}
-
-.menu__item {
-    border-bottom:1px solid #ccc;
-    padding:10px 5px;
-}
-
 /* Dropdown style */
 .dropdown {
     position:relative;
@@ -559,10 +556,6 @@ background: linear-gradient(to right, rgba(201,29,0,1) 0%, rgba(255,0,148,1) 100
     transition: all 0.3s ease;
 }
 
-.dropdown:hover .dropdown__indicator {
-    bottom:2px;
-}
-
 .dropdown dt a {
   display: block;
   width: 100%;
@@ -572,12 +565,12 @@ background: linear-gradient(to right, rgba(201,29,0,1) 0%, rgba(255,0,148,1) 100
     position: relative;
 }
 .dropdown dd ul {
+    z-index:1;
     display: none;
     position: absolute;
     left: 0;
     right:0;
     top: 0;
-    color: red;
     background: white;
     -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
@@ -593,6 +586,96 @@ background: linear-gradient(to right, rgba(201,29,0,1) 0%, rgba(255,0,148,1) 100
 }
 
 
+/*menu*/
+.menu {
+    position:relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.menu__btn--toolbar {
+    padding:0 20px;
+}
+
+
+
+.menu__btn:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+
+    position: absolute;
+
+    transition: all 0.2s ease;
+}
+
+.menu__btn:hover:before {
+    width:calc(100% - 8px);
+    height:0px;
+}
+
+.menu__indicator--rb:before {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    right: 4px;
+    bottom: 4px;
+}
+
+.menu__indicator--lb:before {
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    left: 4px;
+    bottom: 4px;
+}
+
+.menu__indicator--rt:before {
+    border-top: 1px solid;
+    border-right: 1px solid;
+    right: 4px;
+    top: 4px;
+}
+
+.menu__indicator--lt:before {
+    border-top: 1px solid;
+    border-left: 1px solid;
+    left: 4px;
+    top: 4px;
+}
+
+
+.menu dt a {
+  display: block;
+  width: 100%;
+}
+
+.menu dd {
+    position: relative;
+}
+.menu dd ul {
+    z-index:1;
+    display: none;
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 0;
+    width:250px;
+    line-height: 40px;
+    background: white;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+
+
+.menu dd li a {
+    display: block;
+    padding: 0 20px;
+    white-space: nowrap;
+}
+.menu dd li a:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
 /*form*/ 
 
 form {

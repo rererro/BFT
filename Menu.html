@@ -20,34 +20,132 @@
     </div>
     <div class="section">
         <div class="section-col--contained">
-            <div class="section-title color-theme border-theme">
-                <div class="section-title__text">表单 Form</div>
+            <div class="section-title color-theme">
+                <div class="section-title__text">导航栏+下拉菜单 Toolbar</div>
                 <div class=section-title__bg></div>
+            </div>  
+            <div class="toolbar toolbar--themed bg-theme">
+                <div> <a href="#" class="brand-logo">Logo</a> </div>
+                <div class="toolbar__section"> 
+                <span class="toolbar__btn bg-white--hover color-theme--hover">HOME</span> 
+                <span class="toolbar__btn bg-white--hover color-theme--hover">
+                    COMPONENTS <span class="icon-chevron-down"></span>
+                </span> 
+                <dl class="dropdown">
+                    <dt class="dropdown__btn bg-white--hover color-theme--hover">
+                        <a><span class="toolbar__selected">下拉选项1</span></a>
+                        <span class="icon-check dropdown__indicator"></span>
+                    </dt>
+                    <dd>
+                        <ul class="color-theme">
+                            <li class="color-black--hover"><a class="default">下拉选项1</a></li>
+                            <li class="color-black--hover"><a>下拉选项2</a></li>
+                            <li class="color-black--hover"><a>下拉选项3</a></li>
+                            <li class="color-black--hover"><a>下拉选项4</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <span class="toolbar__btn bg-white--hover color-theme--hover">
+                    COMPONENTS <span class="icon-chevron-down"></span>
+                </span> 
+                </div>
             </div>
-            <form>
-                <div class="form__label">
-                    <span class="icon-user color-theme"></span> 用户名
-                </div>
-                <input type="text" name="firstname" value="天际公民" class="border-theme--hover">
-                <div class="form__label">
-                    <span class="icon-mail color-theme"></span> 邮箱
-                </div>
-                <input type="Email" name="lastname" value="vincent.sun@seed.space" class="border-theme--hover">
-                <div class="form__label">
-                    <span class="icon-lock color-theme"></span> 密码
-                </div>
-                <input type="password" name="password" value="12341234" class="border-theme--hover">
-                <div class="form__label">
-                    <span class="icon-mail color-theme"></span> 其他
-                </div>
-                <textarea type="text" rows="6" class="border-theme--hover">This defines the alignment along the main axis. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</textarea>
-                <div class="form__action">
-                    <div class="form__btn--row border-theme color-theme--hover"><span class="icon-check color-theme"></span> 保存Save</div>
-                </div>
-
-            </form>
         </div>
     </div>
+    <div class="section">
+        <div class="section-col--contained">
+            <div class="section-title color-theme">
+                <div class="section-title__text">菜单 Menu</div>
+                <div class=section-title__bg></div>
+            </div>  
+            <div class="toolbar toolbar--themed bg-theme">
+                <div> <a href="#" class="brand-logo">Logo</a> </div>
+                <div class="toolbar__section"> 
+                <span class="toolbar__btn bg-white--hover color-theme--hover">HOME</span> 
+                <span class="toolbar__btn bg-white--hover color-theme--hover">
+                    COMPONENTS <span class="icon-chevron-down"></span>
+                </span> 
+                <dl class="menu">
+                    <dt class="menu__btn menu__btn--toolbar menu__btn--toolbar bg-white--hover color-theme--hover">
+                        <a><span class="toolbar__selected">下拉选项1</span></a>
+                        <span class="icon-arrow-down-right menu__indicator"></span>
+                    </dt>
+                    <dd>
+                        <ul class="color-theme">
+                            <li class="color-black--hover"><a class="default">下拉选项1</a></li>
+                            <li class="color-black--hover"><a>下拉选项2</a></li>
+                            <li class="color-black--hover"><a>下拉选项3</a></li>
+                            <li class="color-black--hover"><a>下拉选项4</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <span class="toolbar__btn bg-white--hover color-theme--hover">
+                    COMPONENTS <span class="icon-chevron-down"></span>
+                </span> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-col--contained">
+            <div class="section-title color-theme">
+                <div class="section-title__text">单独下拉菜单 Menu</div>
+                <div class=section-title__bg></div>
+            </div>  
+            <dl class="menu">
+                <dt class="btn btn-large color-theme--hover border-theme--hover menu__btn menu__indicator menu__indicator--rb">
+                    <a><span class="toolbar__selected">右下展开</span></a>
+                </dt>
+                <dd>
+                    <ul class="color-theme">
+                        <li class="color-black--hover"><a class="default">下拉选项1</a></li>
+                        <li class="color-black--hover"><a>下拉选项2</a></li>
+                        <li class="color-black--hover"><a>下拉选项3</a></li>
+                        <li class="color-black--hover"><a>下拉选项4</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="menu">
+                <dt class="btn btn-large color-theme--hover border-theme--hover menu__btn menu__indicator menu__indicator--lb">
+                    <a><span class="toolbar__selected">左下展开</span></a>
+                </dt>
+                <dd>
+                    <ul class="color-theme">
+                        <li class="color-black--hover"><a class="default">下拉选项1</a></li>
+                        <li class="color-black--hover"><a>下拉选项2</a></li>
+                        <li class="color-black--hover"><a>下拉选项3</a></li>
+                        <li class="color-black--hover"><a>下拉选项4</a></li>
+                    </ul>
+                </dd>
+            </dl>   
+            <dl class="menu">
+                <dt class="btn btn-large color-theme--hover border-theme--hover menu__btn menu__indicator menu__indicator--rt">
+                    <a><span class="toolbar__selected">右上展开</span></a>
+                </dt>
+                <dd>
+                    <ul class="color-theme">
+                        <li class="color-black--hover"><a class="default">下拉选项1</a></li>
+                        <li class="color-black--hover"><a>下拉选项2</a></li>
+                        <li class="color-black--hover"><a>下拉选项3</a></li>
+                        <li class="color-black--hover"><a>下拉选项4</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="menu">
+                <dt class="btn btn-large color-theme--hover border-theme--hover menu__btn menu__indicator menu__indicator--lt">
+                    <a><span class="toolbar__selected">左上展开</span></a>
+                </dt>
+                <dd>
+                    <ul class="color-theme">
+                        <li class="color-black--hover"><a class="default">下拉选项1</a></li>
+                        <li class="color-black--hover"><a>下拉选项2</a></li>
+                        <li class="color-black--hover"><a>下拉选项3</a></li>
+                        <li class="color-black--hover"><a>下拉选项4</a></li>
+                    </ul>
+                </dd>
+            </dl>        
+        </div>
+    </div>    
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="all.js"></script>
