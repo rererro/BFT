@@ -21,7 +21,6 @@ menu.find(".menu__btn").click(function(e) {
 
 // Onclick on a menu item, close menu
 menu.find("dd").click(function() {
-    // Close dropdown
     $(this).children("ul").hide(100);
     $(this).parent(".menu").removeClass('menu--opened');
 }); 
@@ -30,24 +29,38 @@ menu.find("dd").click(function() {
 $(document).bind('click', function(e) {
     if (!$(e.target).parents().hasClass("menu")) {
         $(".menu dd ul").hide(100); 
+        $(".menu").removeClass('menu--opened'); 
     } 
 });
 
-var dropdown = $(".dropdown");
 
-// Onclick on a dropdown__btn, toggle dropdown visibility
-dropdown.find(".dropdown__btn").click(function() {
-    $(this).next().children().toggle(100);
-    console.log("toggle dropdown");
+
+var select = $(".select");
+
+// Onclick on a select__btn, toggle select visibility
+select.find(".select__btn").click(function(e) {
+    // close already opened menus
+    $(".select dd ul").hide(100); 
+    console.log("close opened selects");
+    if (!$(e.target).parents().hasClass("select--opened")) {
+        // untag all other menus, tag and open this menu
+        $(this).next().children().show(100);
+        $(".select").removeClass('select--opened'); 
+        $(this).parent(".select").addClass('select--opened');
+    } else {
+        // untag this menu (already closed from above)
+        $(this).parent(".select").removeClass('select--opened');
+    }
+
 });
 
-// Click handler for dropdown
-dropdown.find("dd ul li a").click(function() {
-    var leSpan = $(this).parents(".dropdown").find("dt a span");
+// Click handler for select
+select.find("dd ul li a").click(function() {
+    var leSpan = $(this).parents(".select").find("dt a span");
 
     // Remove selected class
-    $(this).parents(".dropdown").find('dd a').each(function() {
-        $(this).removeClass('toolbar__selected');
+    $(this).parents(".select").find('dd a').each(function() {
+        $(this).removeClass('select__selected color-theme');
         console.log("click handler");
     });
 
@@ -56,18 +69,23 @@ dropdown.find("dd ul li a").click(function() {
 
     // If back to default, remove selected class else addclass on right element
     if ($(this).hasClass('default')) {
-        leSpan.removeClass('toolbar__selected')
+        leSpan.removeClass('select__selected color-theme')
+        $(this).addClass('select__selected color-theme');
     } else {
-        leSpan.addClass('toolbar__selected');
-        $(this).addClass('toolbar__selected');
+        leSpan.addClass('select__selected color-theme');
+        $(this).addClass('select__selected color-theme');
     }
 
-    // Close dropdown
+    // Close select
     $(this).parents("ul").hide(100);
-    console.log("close dropdown");
+    $(this).parents(".select").removeClass('select--opened'); 
 });
 
-// Close all dropdown onclick on another element
+
+// Onclick any other element, close all menus
 $(document).bind('click', function(e) {
-    if (!$(e.target).parents().hasClass("dropdown")) $(".dropdown dd ul").hide(100);
+    if (!$(e.target).parents().hasClass("select")) {
+        $(".select dd ul").hide(100); 
+        $(".select").removeClass('select--opened'); 
+    } 
 });
