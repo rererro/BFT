@@ -3,17 +3,35 @@
 
 var menu = $(".menu");
 
-// Onclick on a menu__btn, toggle dropdown visibility
-menu.find(".menu__btn").click(function() {
-    $(this).next().children().toggle(100);
-    console.log("toggle menu");
+// Onclick on a menu button, toggle menu visibility
+menu.find(".menu__btn").click(function(e) {
+    // close already opened menus
+    $(".menu dd ul").hide(100); 
+    console.log("close opened menus");
+    if (!$(e.target).parents().hasClass("menu--opened")) {
+        // untag all other menus, tag and open this menu
+        $(this).next().children().show(100);
+        $(".menu").removeClass('menu--opened'); 
+        $(this).parent(".menu").addClass('menu--opened');
+    } else {
+        // untag this menu (already closed from above)
+        $(this).parent(".menu").removeClass('menu--opened');
+    }
 });
 
-// Close all menu onclick on another element
+// Onclick on a menu item, close menu
+menu.find("dd").click(function() {
+    // Close dropdown
+    $(this).children("ul").hide(100);
+    $(this).parent(".menu").removeClass('menu--opened');
+}); 
+
+// Onclick any other element, close all menus
 $(document).bind('click', function(e) {
-    if (!$(e.target).parents().hasClass("menu")) $(".menu dd ul").hide(100);
+    if (!$(e.target).parents().hasClass("menu")) {
+        $(".menu dd ul").hide(100); 
+    } 
 });
-
 
 var dropdown = $(".dropdown");
 
