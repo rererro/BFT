@@ -7,7 +7,6 @@ var menu = $(".menu");
 menu.find(".menu__btn").click(function(e) {
     // close already opened menus
     $(".menu dd ul").hide(100); 
-    console.log("close opened menus");
     if (!$(e.target).parents().hasClass("menu--opened")) {
         // untag all other menus, tag and open this menu
         $(this).next().children().show(100);
@@ -39,16 +38,16 @@ var select = $(".select");
 
 // Onclick on a select__btn, toggle select visibility
 select.find(".select__btn").click(function(e) {
-    // close already opened menus
+    // close already opened select
     $(".select dd ul").hide(100); 
     console.log("close opened selects");
     if (!$(e.target).parents().hasClass("select--opened")) {
-        // untag all other menus, tag and open this menu
+        // untag all other select, tag and open this select
         $(this).next().children().show(100);
         $(".select").removeClass('select--opened'); 
         $(this).parent(".select").addClass('select--opened');
     } else {
-        // untag this menu (already closed from above)
+        // untag this select (already closed from above)
         $(this).parent(".select").removeClass('select--opened');
     }
 
@@ -56,25 +55,16 @@ select.find(".select__btn").click(function(e) {
 
 // Click handler for select
 select.find("dd ul li a").click(function() {
-    var leSpan = $(this).parents(".select").find("dt a span");
+    var selectValue = $(this).parents(".select").find(".select__btn a span");
 
-    // Remove selected class
-    $(this).parents(".select").find('dd a').each(function() {
-        $(this).removeClass('select__selected color-theme');
-        console.log("click handler");
+    // Update selected marker
+    $(this).parents(".select").find('ul a').each(function() {
+        $(this).removeClass('select--selected color-theme');
     });
+    $(this).addClass('select--selected color-theme');
 
-    // Update selected value
-    leSpan.html($(this).html());
-
-    // If back to default, remove selected class else addclass on right element
-    if ($(this).hasClass('default')) {
-        leSpan.removeClass('select__selected color-theme')
-        $(this).addClass('select__selected color-theme');
-    } else {
-        leSpan.addClass('select__selected color-theme');
-        $(this).addClass('select__selected color-theme');
-    }
+    // Update select__btn value
+    selectValue.html($(this).html());
 
     // Close select
     $(this).parents("ul").hide(100);
@@ -82,7 +72,7 @@ select.find("dd ul li a").click(function() {
 });
 
 
-// Onclick any other element, close all menus
+// Onclick any other element, close all selects
 $(document).bind('click', function(e) {
     if (!$(e.target).parents().hasClass("select")) {
         $(".select dd ul").hide(100); 
