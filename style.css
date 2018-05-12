@@ -390,6 +390,8 @@ h6 {
     height:75px;
     background-color:grey;
     margin-right:10px;
+    background-size:cover;
+    background-position:50% 50%;
 }
 
 .list__avatar {
@@ -939,6 +941,85 @@ textarea {
     list-style-type: none;
     border: 1px solid;
     cursor: pointer;
+}
+
+
+/*popup*/
+
+.pop {
+    width: 750px;
+    max-width: calc(100% - 20px);
+    position: fixed;
+    bottom: 10px;
+    padding:10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.pop__nav {
+    padding: 0px 15px;
+    margin: 0px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 28px;
+    height: 30px;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0);
+
+}
+
+.pop--mini {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 10px;
+    line-height: 50px;
+    border-radius: 100%;
+    background: white;
+    font-size: 18px;
+    text-align: center;
+    right: 30px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+/*tabs*/
+
+.tab {
+    padding-top:10px;
+}
+
+.tabs {
+
+}
+.tabs li {
+    /*float: left;*/
+    /*line-height: 38px;*/
+    /*overflow: hidden;*/
+    /*padding: 0;*/
+    /*position: relative;*/
+}
+.tabs a {
+
+}
+.tab_content {
+    flex:1;
+}
+.tabs_item {
+    display: none;
+}
+
+.tabs_item:first-child {
+    display: block;
+}
+
+.current div {
+    border-color: #DB4949;
+    color:#DB4949
 }
 
 
