@@ -17,8 +17,8 @@
       <file leaf-file-name="popup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/independent toggle/popup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="1343">
+              <caret line="136" column="26" selection-start-line="136" selection-start-column="26" selection-end-line="136" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -29,8 +29,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/independent toggle/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="205" column="40" lean-forward="true" selection-start-line="205" selection-start-column="39" selection-end-line="205" selection-end-column="40" />
+            <state relative-caret-position="665">
+              <caret line="173" column="20" selection-start-line="173" selection-start-column="20" selection-end-line="173" selection-end-column="20" />
               <folding>
                 <element signature="e#5762#8654#2" expanded="true" />
               </folding>
@@ -47,6 +47,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-896">
+              <caret line="356" lean-forward="true" selection-start-line="356" selection-end-line="356" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -55,6 +64,8 @@
       <find>list__cover</find>
       <find>.btn</find>
       <find>ch</find>
+      <find>list</find>
+      <find>left-s</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -67,11 +78,11 @@
         <option value="$PROJECT_DIR$/menus.html" />
         <option value="$PROJECT_DIR$/buttons.html" />
         <option value="$PROJECT_DIR$/Forms.html" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/popup.html" />
         <option value="$PROJECT_DIR$/demo.css" />
         <option value="$PROJECT_DIR$/all.js" />
         <option value="$PROJECT_DIR$/independent toggle/all.js" />
+        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/independent toggle/popup.html" />
         <option value="$PROJECT_DIR$/independent toggle/style.css" />
       </list>
@@ -148,12 +159,12 @@
       <workItem from="1526027179802" duration="599000" />
       <workItem from="1526060189143" duration="35020000" />
       <workItem from="1526511628307" duration="6447000" />
-      <workItem from="1527114883794" duration="7756000" />
+      <workItem from="1527114883794" duration="9365000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50586000" />
+    <option name="totallyTimeSpent" value="52195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1815" height="1096" extended-state="6" />
@@ -538,13 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1792">
-          <caret line="166" selection-start-line="166" selection-end-line="177" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -559,10 +563,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-896">
+          <caret line="356" lean-forward="true" selection-start-line="356" selection-end-line="356" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/independent toggle/popup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="1343">
+          <caret line="136" column="26" selection-start-line="136" selection-start-column="26" selection-end-line="136" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -571,8 +582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/independent toggle/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="205" column="40" lean-forward="true" selection-start-line="205" selection-start-column="39" selection-end-line="205" selection-end-column="40" />
+        <state relative-caret-position="665">
+          <caret line="173" column="20" selection-start-line="173" selection-start-column="20" selection-end-line="173" selection-end-column="20" />
           <folding>
             <element signature="e#5762#8654#2" expanded="true" />
           </folding>
